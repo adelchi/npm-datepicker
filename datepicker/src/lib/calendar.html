@@ -60,7 +60,7 @@
 
   <div class="mat-calendar-heading" *ngIf="view === 'month' || view === 'year'">
     <button mat-icon-button class="mat-calendar-previous-button"
-      (click)="_previousClicked()" [attr.disabled]="!_previousEnabled() ? '' : null"
+      (click)="_previousClicked()" [disabled]="!_previousEnabled()"
       [attr.aria-label]="_prevButtonLabel">
     </button>
 
@@ -72,7 +72,7 @@
     </button>
 
     <button mat-icon-button class="mat-calendar-next-button"
-      (click)="_nextClicked()" [attr.disabled]="!_nextEnabled() ? '' : null"
+      (click)="_nextClicked()" [disabled]="!_nextEnabled()"
       [attr.aria-label]="_nextButtonLabel">
     </button>
   </div>
